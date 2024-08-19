@@ -16,6 +16,8 @@
             let datos = [8,2,4,1,16]; //arreglo de valores
             let resultado = 0;
 
+            let nombre = $("#nombre").val(); //variable
+
             function botones(numero,condicion){
                 if(numero==1&&condicion=="si"){
                     resultado = resultado + datos[0];
@@ -49,15 +51,16 @@
                     resultado += 0;
                 }
                 if(numero==5&&condicion=="si"){
+                    
                     resultado = resultado + datos[4];
                     
                     console.log(resultado);
                     
-                    $("#resultadoMensaje").html("<p>El numero que usted penso es: </p>"+resultado);
+                    $("#resultadoMensaje").html("<p>"+nombre+" el numero que usted penso es: </p>"+resultado);
 
                     
                 }else{
-                    $("#resultadoMensaje").html("<p>El numero que usted penso es: </p>"+resultado);
+                    $("#resultadoMensaje").html("<p>"+nombre+" el numero que usted penso es: </p>"+resultado);
                 }
                 
                 
@@ -202,9 +205,12 @@
     </script>
 </head>
 <body>
-    <h1>JUEGO MATEMATICO - CAMBIOS ADICIONALES</h1>
-    <h2>Titulo adicional</h2>
+    <h1>JUEGO MATEMATICO</h1>
+
+    
+    
     <div class="formcovid">
+        <input type="text" name="nombre" id="nombre">
         <div id="tabla1">
         <table class="table1">
             <tr>
@@ -234,9 +240,12 @@
             </tr>
         </table>      
                 <button id="si1" class="botonSI">SI</button>
-                <button id="no1" class="botonNO">NO</button>              
+                <button id="no1" class="botonNO">NO</button>
+                
+               
         </div>
 
+        
         <!--Tabla 2-->
 
         <div id="tabla2">
