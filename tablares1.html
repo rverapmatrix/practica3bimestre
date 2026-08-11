@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,71 +11,67 @@
     <script src="js/jquery.js"></script>
 
     <script>
+        $(document).ready(function() {
 
-        $(document).ready(function () {
-           
-            let datos = [8,2,4,1,16]; //arreglo de valores
+            let datos = [8, 2, 4, 1, 16]; //arreglo de valores
             let resultado = 0;
 
-            let nombre = $("#nombre").val(); //variable
+            let nombre = $("#nombre").val(); //variable para colocar el nombre
 
-            function botones(numero,condicion){
-                if(numero==1&&condicion=="si"){
+            function botones(numero, condicion) {
+                if (numero == 1 && condicion == "si") {
                     resultado = resultado + datos[0];
                     console.log(resultado);
-                }else{
+                } else {
                     resultado += 0;
                 }
-                
-                if(numero==2&&condicion=="si"){
-                    resultado = resultado + datos[1];
-                    
-                    console.log(resultado);
-                }
-                else{
-                    resultado += 0;
-                }
-                if(numero==3&&condicion=="si"){
-                    resultado = resultado + datos[2];
-                    
-                    console.log(resultado);
-                }
-                else{
-                    resultado += 0;
-                }
-                if(numero==4&&condicion=="si"){
-                    resultado = resultado + datos[3];
-                    
-                    console.log(resultado);
-                }
-                else{
-                    resultado += 0;
-                }
-                if(numero==5&&condicion=="si"){
-                    
-                    resultado = resultado + datos[4];
-                    
-                    console.log(resultado);
-                    
-                    $("#resultadoMensaje").html("<p>"+nombre+" el numero que usted penso es: </p>"+resultado);
 
-                    
-                }else{
-                    $("#resultadoMensaje").html("<p>"+nombre+" el numero que usted penso es: </p>"+resultado);
+                if (numero == 2 && condicion == "si") {
+                    resultado = resultado + datos[1];
+
+                    console.log(resultado);
+                } else {
+                    resultado += 0;
                 }
-                
-                
+                if (numero == 3 && condicion == "si") {
+                    resultado = resultado + datos[2];
+
+                    console.log(resultado);
+                } else {
+                    resultado += 0;
+                }
+                if (numero == 4 && condicion == "si") {
+                    resultado = resultado + datos[3];
+
+                    console.log(resultado);
+                } else {
+                    resultado += 0;
+                }
+                if (numero == 5 && condicion == "si") {
+
+                    resultado = resultado + datos[4];
+
+                    console.log(resultado);
+
+                    $("#resultadoMensaje").html("<p>" + nombre + " el numero que usted penso es: </p>" + resultado);
+
+
+                } else {
+                    $("#resultadoMensaje").html("<p>" + nombre + " el numero que usted penso es: </p>" + resultado);
+                }
+
+
             }
 
-             //Ocultando todos, menos la tabla 1
-             $("#tabla2").hide();
+            //Ocultando todos, menos la tabla 1
+            $("#tabla2").hide();
             $("#tabla3").hide();
             $("#tabla4").hide();
             $("#tabla5").hide();
 
             //Ocultando todos, menos la tabla 2
-            $("#si1").click(function () { 
-                
+            $("#si1").click(function() {
+
                 $("#tabla1").hide();
                 $("#tabla2").show();
                 $("#tabla3").hide();
@@ -82,24 +79,24 @@
                 $("#tabla5").hide();
                 $("#resultadoMensaje").hide();
 
-                botones(1,"si");
+                botones(1, "si");
             });
 
             //Ocultando todos, menos la tabla 3
-            $("#si2").click(function () { 
-                
+            $("#si2").click(function() {
+
                 $("#tabla1").hide();
                 $("#tabla2").hide();
                 $("#tabla3").show();
                 $("#tabla4").hide();
                 $("#tabla5").hide();
                 $("#resultadoMensaje").hide();
-                botones(2,"si");
+                botones(2, "si");
 
             });
             //Ocultando todos, menos la tabla 4
-            $("#si3").click(function () { 
-                
+            $("#si3").click(function() {
+
                 $("#tabla1").hide();
                 $("#tabla2").hide();
                 $("#tabla3").hide();
@@ -107,12 +104,12 @@
                 $("#tabla5").hide();
                 $("#resultadoMensaje").hide();
 
-                botones(3,"si");
+                botones(3, "si");
 
             });
             //Ocultando todos, menos la tabla 5
-            $("#si4").click(function () { 
-                
+            $("#si4").click(function() {
+
                 $("#tabla1").hide();
                 $("#tabla2").hide();
                 $("#tabla3").hide();
@@ -120,27 +117,27 @@
                 $("#tabla5").show();
                 $("#resultadoMensaje").hide();
 
-                botones(4,"si");
+                botones(4, "si");
 
             });
             //Mostrando resultado
-            $("#si5").click(function () { 
-                
+            $("#si5").click(function() {
+
                 $("#tabla1").hide();
                 $("#tabla2").hide();
                 $("#tabla3").hide();
                 $("#tabla4").hide();
                 $("#tabla5").hide();
 
-                botones(5,"si");
+                botones(5, "si");
                 $("#resultadoMensaje").show();
 
             });
 
             /*******NO*****/
             //Ocultando todos, menos la tabla 2
-            $("#no1").click(function () { 
-                
+            $("#no1").click(function() {
+
                 $("#tabla1").hide();
                 $("#tabla2").show();
                 $("#tabla3").hide();
@@ -148,24 +145,24 @@
                 $("#tabla5").hide();
                 $("#resultadoMensaje").hide();
 
-                botones(1,"no");
+                botones(1, "no");
             });
 
             //Ocultando todos, menos la tabla 3
-            $("#no2").click(function () { 
-                
+            $("#no2").click(function() {
+
                 $("#tabla1").hide();
                 $("#tabla2").hide();
                 $("#tabla3").show();
                 $("#tabla4").hide();
                 $("#tabla5").hide();
                 $("#resultadoMensaje").hide();
-                botones(2,"no");
+                botones(2, "no");
 
             });
             //Ocultando todos, menos la tabla 4
-            $("#no3").click(function () { 
-                
+            $("#no3").click(function() {
+
                 $("#tabla1").hide();
                 $("#tabla2").hide();
                 $("#tabla3").hide();
@@ -173,12 +170,12 @@
                 $("#tabla5").hide();
                 $("#resultadoMensaje").hide();
 
-                botones(3,"no");
+                botones(3, "no");
 
             });
             //Ocultando todos, menos la tabla 5
-            $("#no4").click(function () { 
-                
+            $("#no4").click(function() {
+
                 $("#tabla1").hide();
                 $("#tabla2").hide();
                 $("#tabla3").hide();
@@ -186,66 +183,67 @@
                 $("#tabla5").show();
                 $("#resultadoMensaje").hide();
 
-                botones(4,"no");
+                botones(4, "no");
 
             });
             //Mostrando resultado
-            $("#no5").click(function () { 
-                
+            $("#no5").click(function() {
+
                 $("#tabla1").hide();
                 $("#tabla2").hide();
                 $("#tabla3").hide();
                 $("#tabla4").hide();
                 $("#tabla5").hide();
 
-                botones(5,"no");
+                botones(5, "no");
                 $("#resultadoMensaje").show();
             });
         });
     </script>
 </head>
+
 <body>
     <h1>JUEGO MATEMATICO</h1>
 
-    
-    
+
+
     <div class="formcovid">
         <input type="text" name="nombre" id="nombre">
         <div id="tabla1">
-        <table class="table1">
-            <tr>
-                <td>8</td>
-                <td>9</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>11</td>
-                <td>12</td>
-                <td>13</td>
-            </tr>
-            <tr>
-                <td>14</td>
-                <td>15</td>
-                <td>24</td>
-            </tr>
-            <tr>
-                <td>25</td>
-                <td>26</td>
-                <td>27</td>
-            </tr>
-            <tr>
-                <td>28</td>
-                <td>29</td>
-                <td>30</td>
-            </tr>
-        </table>      
-                <button id="si1" class="botonSI">SI</button>
-                <button id="no1" class="botonNO">NO</button>
-                
-               
+            <table class="table1">
+                <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                </tr>
+            </table>
+            <button id="si1" class="botonSI">SI</button>
+            <button id="no1" class="botonNO">NO</button>
+
+
         </div>
 
-        
+
         <!--Tabla 2-->
 
         <div id="tabla2">
@@ -275,10 +273,10 @@
                     <td>27</td>
                     <td>30</td>
                 </tr>
-            </table>           
-                <button id="si2" class="botonSI">SI</button>
-                <button id="no2" class="botonNO">NO</button>
-                
+            </table>
+            <button id="si2" class="botonSI">SI</button>
+            <button id="no2" class="botonNO">NO</button>
+
         </div>
 
         <!--tabla 3-->
@@ -309,7 +307,7 @@
                     <td>29</td>
                     <td>30</td>
                 </tr>
-            </table>      
+            </table>
             <button id="si3" class="botonSI">SI</button>
             <button id="no3" class="botonNO">NO</button>
         </div>
@@ -343,9 +341,9 @@
                     <td>27</td>
                     <td>29</td>
                 </tr>
-            </table>      
-                <button id="si4" class="botonSI">SI</button>
-                <button id="no4" class="botonNO">NO</button>
+            </table>
+            <button id="si4" class="botonSI">SI</button>
+            <button id="no4" class="botonNO">NO</button>
         </div>
 
 
@@ -378,19 +376,20 @@
                     <td>29</td>
                     <td>30</td>
                 </tr>
-            </table>      
-                <button id="si5" class="botonSI">SI</button>
-                <button id="no5" class="botonNO">NO</button>
+            </table>
+            <button id="si5" class="botonSI">SI</button>
+            <button id="no5" class="botonNO">NO</button>
         </div>
 
         <!--Resultado-->
 
         <div id="resultadoMensaje">
-            
+
         </div>
 
 
     </div>
 
 </body>
+
 </html>
