@@ -17,6 +17,7 @@
             let resultado = 0;
 
             let nombre = $("#nombre").val(); //variable
+            let apellido = $("#apellido").val(); //variable
 
             function botones(numero,condicion){
                 if(numero==1&&condicion=="si"){
@@ -56,7 +57,7 @@
                     
                     console.log(resultado);
                     
-                    $("#resultadoMensaje").html("<p>"+nombre+" el numero que usted penso es: </p>"+resultado);
+                    $("#resultadoMensaje").html("<p>"+nombre+apellido+" el numero que usted penso es: </p>"+resultado);
 
                     
                 }else{
